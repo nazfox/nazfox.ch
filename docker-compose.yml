@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+    main:
+        image: sebp/lighttpd
+        volumes:
+            - ./src:/var/www/localhost/htdocs
+        labels:
+            - traefik.port=80
+            - traefik.http.routers.lighttpd.rule=Host(`nazfox.ch`)
+            - traefik.http.routers.lighttpd.entrypoints=websecure
+        tty: true
+        restart: always
+
+    dev:
+        image: sebp/lighttpd
+        volumes:
+            - ./src:/var/www/localhost/htdocs
+        ports:
+            - 8080:80
+        tty: true
