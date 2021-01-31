@@ -6,7 +6,7 @@
 
 In the project directory, you can run:
 
-### `docker-compose up main -d`
+### `docker-compose up -d main`
 
 Launch the web server in the background process.  
 This will use the traefik reverse proxy.
