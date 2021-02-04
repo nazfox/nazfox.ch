@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #292a2d;
-    color: #a9a9b3;
+    background-color: rgb(33, 32, 43);
+    color: rgb(255, 255, 255);
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -23,6 +23,7 @@ body {
     font-size: 5em;
 }
 
-.pink-text {
-    color: #fe5186;
+.dot {
+    color: #FC7ED2;
+    font-size: 25%;
 }
