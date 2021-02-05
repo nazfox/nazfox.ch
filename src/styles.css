@@ -1,29 +1,102 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(33, 32, 43);
-    color: rgb(255, 255, 255);
-    font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(33, 32, 43);
+  color: rgb(255, 255, 255);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-#title {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+#main {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
 }
 
 #title p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 5em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 5rem;
 }
 
-.dot {
-    color: #FC7ED2;
-    font-size: 25%;
+#title .dot {
+  color: #FC7ED2;
+  font-size: 25%;
+}
+
+#links {
+  margin: 0;
+  padding: 0;
+}
+
+#links a {
+  position: relative;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0;
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#links a::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #FC7ED2;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+#links a:hover {
+}
+
+#links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#links a:focus {
+  outline: none;
+}
+
+#links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#links li {
+  flex: 3;
+  margin: 0;
+  padding: 0;
+  max-width: 150px;
+}
+
+@media all and (max-width: 1000px) {
+  #links ul {
+    flex-wrap: wrap;
+  }
+
+  #links li {
+    flex: 1 1 50%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #links li {
+    flex-basis: 100%;
+  }
 }
