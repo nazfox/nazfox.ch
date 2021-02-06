@@ -10,13 +10,30 @@
 <body>
 <div id='main'>
   <div id='title'>
-    <p>nazfox<span class='dot'>♥</span>ch</p>
+    <span>nazfox<span class='dot'>♥</span>ch</span>
   </div>
   <div id='links'>
     <ul>
+      <li><a href='javascript:void(0)' onclick='showabout()'>about</a></li>
       <li><a href='https://blog.nazfox.ch'>nazlog</a></li>
       <li><a href='https://twitter.com/nazfoxch'>twitter</a></li>
     </ul>
   </div>
 </div>
+<div id='about'>
+  <p>I'm a foxgirl.</p>
+  <a href='javascript:void(0)' onclick='hideabout()'>close</a>
+</div>
+<script type='text/javascript'>
+function showabout() {
+  let about = document.getElementById('about');
+  about.style.pointerEvents = 'all';
+  about.style.opacity = '1';
+}
+function hideabout() {
+  let about = document.getElementById('about');
+  about.style.pointerEvents = 'none';
+  about.style.opacity = '0';
+}
+</script>
 </body>

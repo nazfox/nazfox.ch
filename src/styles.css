@@ -4,6 +4,7 @@ body {
   background-color: rgb(33, 32, 43);
   color: rgb(255, 255, 255);
   font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
 }
 
 #main {
@@ -13,14 +14,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
 }
 
-#title p {
+#title {
+}
+
+#title span {
   margin: 0;
   padding: 0;
-  text-align: center;
   font-size: 5rem;
+  letter-spacing: 0.2rem;
 }
 
 #title .dot {
@@ -30,73 +33,103 @@ body {
 
 #links {
   margin: 0;
+  margin-top: 3.5rem;
   padding: 0;
-}
-
-#links a {
-  position: relative;
-  display: block;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  margin: 0;
-  padding: 5px 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-#links a::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 3px;
-  top: 100%;
-  left: 0;
-  background: #FC7ED2;
-  transition: transform 0.5s;
-  transform: scaleX(0);
-  transform-origin: right;
-}
-
-#links a:hover {
-}
-
-#links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-#links a:focus {
-  outline: none;
 }
 
 #links ul {
-  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  list-style: none;
+  border: solid 1px white;
+  border-radius: 4px;
+  /*justify-content: center;*/
 }
 
 #links li {
   flex: 3;
   margin: 0;
   padding: 0;
-  max-width: 150px;
+  border-left: solid 1px white;
 }
 
-@media all and (max-width: 1000px) {
-  #links ul {
-    flex-wrap: wrap;
-  }
-
-  #links li {
-    flex: 1 1 50%;
-  }
+#links li:first-child {
+  border-left: 0;
 }
 
-@media all and (max-width: 480px) {
-  #links li {
-    flex-basis: 100%;
-  }
+#links a {
+  position: relative;
+  display: block;
+  min-width: 7.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  margin: 0;
+  padding: 0 1.25rem 0 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+
+#links a:hover {
+  transition: all 0.5s ease;
+  background-color: #FC7ED2;
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+#about {
+  pointer-events: none;
+  opacity: 0;
+  margin: 0;
+  padding: 2.5rem 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  background-color: rgba(33, 32, 43, 0.97);
+  border: solid 5px white;
+}
+
+#about p {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+  min-width: 7.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  letter-spacing: 0.2rem;
+}
+
+#about a {
+  position: relative;
+  display: block;
+  min-width: 7.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  margin: 0;
+  padding: 0 1.25rem 0 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.5s ease;
+  background-color: rgb(33, 32, 43);
+  border: solid 1px white;
+  border-radius: 4px;
+}
+
+#about a:hover {
+  transition: all 0.5s ease;
+  background-color: #FC7ED2;
 }
