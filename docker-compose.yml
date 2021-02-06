@@ -7,8 +7,8 @@ services:
             - ./src:/var/www/localhost/htdocs
         labels:
             - traefik.port=80
-            - traefik.http.routers.lighttpd.rule=Host(`nazfox.ch`)
-            - traefik.http.routers.lighttpd.entrypoints=websecure
+            - traefik.http.routers.nazfoxch.rule=Host(`nazfox.ch`)
+            - traefik.http.routers.nazfoxch.entrypoints=websecure
         tty: true
         restart: always
 
